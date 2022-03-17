@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Pokemon Game</title>
+{% endblock %}
+{% block body %}
+<main>
+   <h1>POKEMON BATTLE</h1>
+   <p><b>{{ opponentsPokemon.name }}</b> USED <b>{{ opponentsPokemonMove }}</b></p>
+   <p>{{ string_2_attack }}</p>
+   <h1><a href="{{ url_for('game') }}">NEXT</a></h1>
+</main>
+{% endblock %}

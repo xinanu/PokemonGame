@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Pokemon Game</title>
+{% endblock %}
+{% block body %}
+<main>
+   <h1>POKEMON BATTLE</h1>
+   <p>YOUR POKEMON IS <b>{{ yourPokemon.name }}</b></p>
+   {{ yourPokemonHealthDisplay }}
+   <form class="form-inline" method="POST" action="{{ url_for('attack') }}">
+      <select name="comp_select" class="selectpicker form-control">
+         <option value="Shield">Shield</option>
+         <option value="Potion">Potion</option>
+      </select>
+      <button type="submit" class="btn btn-default">USE</button>
+   </form>
+   <h1><a href="{{ url_for('game') }}">GO BACK</a></h1>
+</main>
+{% endblock %}

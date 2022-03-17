@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Pokemon Game</title>
+{% endblock %}
+{% block body %}
+<main>
+   <h1>POKEMON BATTLE RESULTS</h1>
+   <p><b>{{ gameWinner }}</b> is the winner!</p>
+   <h1><a href="{{ url_for('index') }}">PLAY AGAIN</a></h1>
+</main>
+{% endblock %}

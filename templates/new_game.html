@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+{% block body %}
+<main>
+   <h1>POKEMON GAME</h1>
+   <h1>WELCOME TO THE GAME!</h1>
+    <p>Your pokemon is <b>{{ yourPokemon.name }}</b></p>
+    <p>Your opponent is <b>{{ opponentsPokemon.name }}</b></p>
+    <button class="btn btn-default"><a href="{{ url_for('game') }}">START THE BATTLE</a></button>
+</main>
+{% endblock %}

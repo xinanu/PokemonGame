@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Pokemon Game</title>
+{% endblock %}
+{% block body %}
+<main>
+   <h1>POKEMON GAME</h1>
+   <h1>CHOOSE GAME MODE</h1>
+   <div class="menu">
+      <form class="form-inline" method="POST" action="{{ url_for('choice') }}">
+         <select name="comp_select" class="selectpicker form-control">
+            <div>
+               <p>
+                  <option value="Hot seats">Hot seats</option>
+               </p>
+               <p>
+                  <option value="Single player">Single player</option>
+               </p>
+            </div>
+         </select>
+         <button type="submit" class="btn btn-default">PICK GAME MODE</button>
+      </form>
+   </div>
+</main>
+{% endblock %}
